@@ -12,7 +12,7 @@ $Orange['title'] = "Blogg";
 $blog = new CContent();
 $filter = new CTextFilter();
 
-if(isset($_POST['blogg'])){
+if(isset($_POST['blog'])){
 
 
     $name = $_POST['name'];
@@ -32,14 +32,16 @@ if(isset($_POST['blogg'])){
 
 <div class="blogg">
 <div class="rubrik"><p class="undertext">Bloggposter</p></div>
+
 $items
+
 </div>
 <div class="blogg-form">
 <div class="rubrik"><p class="undertext">Skriv ett blogg inlägg</p></div>
 <form method="post" action="blog.php">
    <p><label>Namn:<br/><input type='text' name='name' placeholder="Namn...."></label></p>
-   <p><label>Meddelande:<br/><textarea name='content' placeholder="Meddelande...."></textarea></label></p>
-    <div class="add"><input type='submit' name='blogg' value='Blogga'/></div>
+   <p><label>Meddelande:<br/><textarea name='content' placeholder="Max 1000 ord...."></textarea></label></p>
+    <div class="add"><input type='submit' name='blog' value='Blogga'/></div>
 </form>
 </div>
 

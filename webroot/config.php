@@ -142,5 +142,5 @@ $Orange['navbar'] = cNavigation::getMenu();
  *
  */
 
-$Orange['stylesheets'] = array('css/new-style.css', 'css/slideshow.css');
+$Orange['stylesheets'] = array('css/style.css', 'css/slideshow.css');
 $Orange['favicon']    = 'img/logo.jpg';

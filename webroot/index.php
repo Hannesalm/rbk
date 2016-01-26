@@ -39,6 +39,7 @@ $slide
 <div class="rubrik"><p class="undertext">Nyheter</div>
 $printNews
 </div>
+
 <div class="blogg-start">
 <div class="rubrik"><p class="undertext">Senaste blogginlägg</div>
 
