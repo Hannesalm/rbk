@@ -288,6 +288,7 @@ input:focus, textarea:focus {
 }
 .form{
     float: left;
+    margin-bottom: 10px;
 }
 .form input{
     margin-right: 62px;
@@ -570,11 +571,7 @@ table {
 }
 .nyheter{
     float: left;
-    width: 600px;
-}
-.nyheter a{
-    text-decoration: none;
-    color: black;
+    width: 700px;
 }
 .user-name{
     position: relative;
@@ -591,11 +588,7 @@ table {
 .user-logo img{
     height:35px;
 }
-.nyheter{
-    float: left;
-    width: 350px;
 
-}
 .blogg{
     float: left;
     width: 466px;
@@ -603,9 +596,7 @@ table {
 
 }
 .blogg-start{
-    float: left;
-    width: 350px;
-    margin-left: 10px;
+    width: 240px;
 }
 .blogg-start a{
 
@@ -623,6 +614,27 @@ table {
     padding-left: 10px;
     min-height: 100px;
     margin-bottom: 5px;
+}
+.box a{
+    padding: .8em 1.5em;
+    text-decoration: none;
+    color: #555;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff #ccc #999 #eee;
+    background: #c1c1c1;
+    background: linear-gradient(#f5f5f5, #c1c1c1);
+}
+.box a:hover{
+    outline: 0;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
 }
 
 .blogg-box{
@@ -701,4 +713,91 @@ table {
 .link{
     float: right;
     font-size: 10px;
+}
+
+/* ------------TABLE--------------*/
+.CSSTableGenerator {
+    margin: 9px;
+    float: right;
+    padding: 0px;
+    width: 400px;
+    /* box-shadow: 10px 10px 5px #888888; */
+    border: 1px solid #000000;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    -webkit-border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+}.CSSTableGenerator table{
+     width:100%;
+     height:100%;
+     margin:0px;padding:0px;
+ }.CSSTableGenerator tr:last-child td:last-child {
+      -moz-border-radius-bottomright:0px;
+      -webkit-border-bottom-right-radius:0px;
+      border-bottom-right-radius:0px;
+  }
+.CSSTableGenerator table tr:first-child td:first-child {
+    -moz-border-radius-topleft:0px;
+    -webkit-border-top-left-radius:0px;
+    border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+    -moz-border-radius-topright:0px;
+    -webkit-border-top-right-radius:0px;
+    border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+     -moz-border-radius-bottomleft:0px;
+     -webkit-border-bottom-left-radius:0px;
+     border-bottom-left-radius:0px;
+ }.CSSTableGenerator tr:hover td{
+
+  }.CSSTableGenerator tr:nth-child(odd){ background-color:#e5e5e5; }
+.CSSTableGenerator tr:nth-child(even)    { background-color:#ffffff; }
+.CSSTableGenerator td{
+    vertical-align:middle;
+
+
+    border:1px solid #000000;
+    border-width:0px 1px 1px 0px;
+    text-align:left;
+    padding:7px;
+    font-size:10px;
+    font-family:arial;
+    font-weight:normal;
+    color:#000000;
+}.CSSTableGenerator tr:last-child td{
+     border-width:0px 1px 0px 0px;
+ }.CSSTableGenerator tr td:last-child{
+      border-width:0px 0px 1px 0px;
+  }.CSSTableGenerator tr:last-child td:last-child{
+       border-width:0px 0px 0px 0px;
+   }
+.CSSTableGenerator tr:first-child td{
+    background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );	background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");	background: -o-linear-gradient(top,#cccccc,b2b2b2);
+    background-color:#cccccc;
+    border:0px solid #000000;
+    text-align:center;
+    border-width:0px 0px 1px 1px;
+    font-size:14px;
+    font-family:arial;
+    font-weight:bold;
+    color:#000000;
+}
+.CSSTableGenerator tr:first-child:hover td{
+    background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );	background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");	background: -o-linear-gradient(top,#cccccc,b2b2b2);
+    background-color:#cccccc;
+}
+.CSSTableGenerator tr:first-child td:first-child{
+    border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+    border-width:0px 0px 1px 1px;
 }

@@ -56,9 +56,9 @@ class CNavigation
             <li><a href=\"#\">Månadscupen</a></li>
         </ul>
     </li>
-    <li><a href=\"#\">Kalender</a></li>
+    <li><a href='calender.php'>Kalender</a></li>
     <li><a href='blog.php'>Blogg</a></li>
-    <li><a href=\"#\">Galleri</a></li>
+    <li><a href='galleri.php'>Galleri</a></li>
     $user
     </ul></nav>";
 

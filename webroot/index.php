@@ -40,17 +40,15 @@ $slide
 $printNews
 </div>
 
-<div class="blogg-start">
-<div class="rubrik"><p class="undertext">Senaste blogginlägg</div>
-
-$blog_posts
-
-</div>
-
 <aside class="aside">
 <div class="rubrik"><p class="undertext">Kalender</div>
 $output
+<div class="blogg-start">
+<div class="rubrik"><p class="undertext">Senaste blogginlägg</div>
+$blog_posts
+</div>
 </aside>
+
 </div>
 
 

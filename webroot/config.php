@@ -118,7 +118,7 @@ $dropmenu = array(
 $Orange['header'] = <<<EOD
 <meta name="viewport" content="width=device-width">
 <img class='sitelogo' src='img/logotransparent.png' alt='Logo'/>
-<span class='sitetitle'>Rödeby Brukshundsklubb</span>
+<span class='sitetitle'>Rödeby Brukshundklubb</span>
 <span class='siteslogan'>Välkommen till Rödeby BK</span>
 
 EOD;

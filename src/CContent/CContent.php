@@ -73,11 +73,11 @@ class CContent extends CDatabase{
         if(CUser::isAuthenticated()){
             foreach($res AS $key => $val) {
                 $content = $val->content;
-                $first=substr($content,0,1000);
+                $first=substr($content,0,20);
                 //$published = $val->published;
                 $val->published = date("| Y, M j, G:i");
                 if($val->deleted == NULL){
-                    $items .= "<a href = '#'><div class='box'><p>$first</p><p class='pub'>Publiserad av: $val->name $val->published</p></div></a>\n";
+                    $items .= "<div class='box'><p>$first...</p><p class='pub'>Publiserad av: $val->name $val->published</p><a class='link' href='#'>Radera</a></div>\n";
                 }
             }
             return $items;
@@ -85,9 +85,9 @@ class CContent extends CDatabase{
             foreach ($res AS $key => $val) {
                 $val->published = date("| Y, M j, G:i");
                 $content = $val->content;
-                $first=substr($content,0,1000);
+                $first=substr($content,0,20);
                 if ($val->deleted == NULL){
-                    $items .= "<div class='box'><p>$first</p><p class='pub'>Publiserad av: $val->name $val->published</p></div>\n";
+                    $items .= "<div class='box'><p>$first...</p><p class='pub'>Publiserad av: $val->name $val->published</p></div>\n";
                 }
             }
             return $items;
@@ -124,7 +124,7 @@ class CContent extends CDatabase{
                 //$first=substr($content,0,255);
                 $val->published = date("| Y, M j, G:i");
                 if($val->deleted == NULL){
-                    $items .= "<a href='#'><div class='box'><h2>$val->title</h2><p>$val->content</p><p class='pub'>Publiserad av: $val->name $val->published</p></div></a>\n";
+                    $items .= "<div class='box'><h2>$val->title</h2><p>$val->content</p><p class='pub'>Publiserad av: $val->name $val->published</p><a class='link' href='#'>Editera</a></div>\n";
                 }
             }
             return $items;

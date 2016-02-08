@@ -5,7 +5,6 @@ include(__DIR__.'/config.php');
  * CMovieSearch constructor.
  * @var CDatabase $db
  */
-$Orange['title'] = "Lägg till nyhet";
 
 if(isset($_POST['add'])){
     $news = new CContent();
@@ -18,28 +17,21 @@ if(isset($_POST['add'])){
     header('Location: index.php');
 } else {
     $Orange['main'] = <<<EOD
-
-      <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
-//<![CDATA[
-        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
-  //]]>
-  </script>
-
+    <h1></h1>
     <div class="form">
     <form method=post action="add-news.php">
               <fieldset>
-              <legend>Lägg till nyhet</legend>
+              <legend>ADD NEWS</legend>
               <p><label>Titel:<br/><input type='text' name='title' placeholder="Title...."></label></p>
               <p><label>Text:<br/><textarea name='content' placeholder="Meddelande...."></textarea></label></p>
               <p><label>Namn:<br/><input type='text' name='name' placeholder="Namn...."></label></p>
-              <p><label>Publicera:<br/><input type='date' name='pub' placeholder="Published...."></label></p>
-              <div class="add"><input type='submit' name='add' value='Publicera'></div>
+              <p><label>Published:<br/><input type='date' name='pub' placeholder="Published...."></label></p>
+              <div class="add"><input type='submit' name='add' value='Publisera'></div>
               </fieldset>
             </form>
         </fieldset>
 </form>
 </div>
-
 EOD;
 
 }
