@@ -54,69 +54,29 @@ $menu = array(
     'medlem' => array('text'=>'Medlem', 'url'=>'medlem.php?p=medlem'),
 );
 
-$dropmenu = array(
-    // Use for styling the menu
-    'class' => 'menu-wrap',
-
-    // Here comes the menu strcture
-    'items' => array(
-        // This is a menu item
-        'home'  => array(
-            'text'  =>'HEM',
-            'url'   =>'index.php',
-        ),
-
-        // This is a menu item
-        'test'  => array(
-            'text'  =>'KLUBBEN',
-            'url'   =>'#',
-
-            // Here we add the submenu, with some menu items, as part of a existing menu item
-            'submenu' => array(
-
-                'items' => array(
-                    // This is a menu item of the submenu
-                    'item 1'  => array(
-                        'text'  => 'Bli medlem',
-                        'url'   => 'medlem.php?p=klubben',
-                    ),
-                    'item 2'  => array(
-                        'text'  => 'Styrelse',
-                        'url'   => '#',
-                    ),
-                    'item 3'  => array(
-                        'text'  => 'Information',
-                        'url'   => '#',
-                    ),
-                    'item 4'  => array(
-                        'text'  => 'Kurser',
-                        'url'   => '#',
-                    ),
-                    'item 5'  => array(
-                        'text'  => 'Hitta oss',
-                        'url'   => '#',
-                    ),
-                ),
-            ),
-        ),
-
-        // This is a menu item
-        'about' => array(
-            'text'  =>'About',
-            'url'   =>'about.php',
-        ),
-    ),
-
-    // This is the callback tracing the current selected menu item base on scriptname
-    'callback' => function($url) {
-        if(basename($_SERVER['SCRIPT_FILENAME']) == $url) {
-            return true;
-        }
-    }
-);
-
 $Orange['header'] = <<<EOD
 <meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    theme: "modern",
+    plugins: [
+        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+        "searchreplace wordcount visualblocks visualchars code fullscreen",
+        "insertdatetime media nonbreaking save table contextmenu directionality",
+        "emoticons template paste textcolor colorpicker textpattern imagetools"
+    ],
+    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | link image",
+    toolbar2: "print preview | forecolor backcolor emoticons",
+    image_advtab: true,
+    templates: [
+        {title: 'Test template 1', content: 'Test 1'},
+        {title: 'Test template 2', content: 'Test 2'}
+    ]
+});
+</script>
+
 <img class='sitelogo' src='img/logotransparent.png' alt='Logo'/>
 <span class='sitetitle'>Rödeby Brukshundklubb</span>
 <span class='siteslogan'>Välkommen till Rödeby BK</span>

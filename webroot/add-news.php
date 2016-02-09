@@ -19,12 +19,6 @@ if(isset($_POST['add'])){
 } else {
     $Orange['main'] = <<<EOD
 
-      <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
-//<![CDATA[
-        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
-  //]]>
-  </script>
-
     <div class="form">
     <form method=post action="add-news.php">
               <fieldset>
