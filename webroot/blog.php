@@ -17,7 +17,7 @@ if(isset($_POST['blog'])){
 
     $name = $_POST['name'];
     $content = $_POST['content'];
-    $content   = $filter->doFilter(htmlentities($content, null, 'UTF-8'), 'markdown');
+    //$content   = $filter->doFilter(htmlentities($content, null, 'UTF-8'));
     $published = date("Y-m-d H:i:s");
     $blog->addPost($name, $content, $published);
 

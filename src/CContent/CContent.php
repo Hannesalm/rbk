@@ -73,7 +73,7 @@ class CContent extends CDatabase{
         if(CUser::isAuthenticated()){
             foreach($res AS $key => $val) {
                 $content = $val->content;
-                $first=substr($content,0,20);
+                $first=substr($content,0,100);
                 //$published = $val->published;
                 $val->published = date("| Y, M j, G:i");
                 if($val->deleted == NULL){
@@ -85,9 +85,9 @@ class CContent extends CDatabase{
             foreach ($res AS $key => $val) {
                 $val->published = date("| Y, M j, G:i");
                 $content = $val->content;
-                $first=substr($content,0,20);
+                $first=substr($content,0,100);
                 if ($val->deleted == NULL){
-                    $items .= "<div class='box'><p>$first...</p><p class='pub'>Publiserad av: $val->name $val->published</p></div>\n";
+                    $items .= "<div class='box'><p>$first...</p></div>\n";
                 }
             }
             return $items;
@@ -140,4 +140,17 @@ class CContent extends CDatabase{
 
 
     }
+    // ----------------------THE PAGE AREA---------------------------
+
+    public function getPage($params){
+
+        return $this->ExecuteSelectQueryAndFetchAll("SELECT content FROM pages WHERE id = ?;", $params);
+    }
+
+    public function updatePage($content, $id){
+        $params = array($content, $id);
+
+        $this->ExecuteQuery("UPDATE pages SET content = ? WHERE id = ?;", $params);
+    }
+
 }

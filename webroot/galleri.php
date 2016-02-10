@@ -12,7 +12,7 @@ $Orange['title'] = "Galleri";
 
 $Orange['main'] = <<<EOD
 
-<img src='img/site-under-construction.gif' alt='Konstruktion'/>
+<img class="image" src='img/site-under-construction.gif' alt='Konstruktion'/>
 
 EOD;
 

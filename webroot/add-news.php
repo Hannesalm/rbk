@@ -7,17 +7,18 @@ include(__DIR__.'/config.php');
  */
 $Orange['title'] = "Lägg till nyhet";
 
-if(isset($_POST['add'])){
-    $news = new CContent();
-    $name = $_POST['name'];
-    $title = $_POST['title'];
-    $content = $_POST['content'];
-    $published = $_POST['pub'];
+if(CUser::isAuthenticated()){
+    if(isset($_POST['add'])){
+        $news = new CContent();
+        $name = $_POST['name'];
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $published = $_POST['pub'];
 
-    $news->addNews($title, $content, $name, $published);
-    header('Location: index.php');
-} else {
-    $Orange['main'] = <<<EOD
+        $news->addNews($title, $content, $name, $published);
+        header('Location: index.php');
+    } else {
+        $Orange['main'] = <<<EOD
 
     <div class="form">
     <form method=post action="add-news.php">
@@ -36,7 +37,11 @@ if(isset($_POST['add'])){
 
 EOD;
 
+    }
+} else {
+        header('Location: login.php');
 }
+
 
 
 // Finally, leave it all to the rendering phase of Orange.

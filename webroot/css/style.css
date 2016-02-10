@@ -286,10 +286,7 @@ input:focus, textarea:focus {
 #menu ul li:last-child > a {
     border-radius: 0 0 3px 3px;
 }
-.form{
-    float: left;
-    margin-bottom: 10px;
-}
+
 .form input{
     margin-right: 62px;
     width:400px;
@@ -648,11 +645,7 @@ table {
     min-height: 100px;
     margin-bottom: 5px;
 }
-.blogg-box img{
-    float: right;
-    width: 150px;
-    height: 150px;
-}
+
 .rubrik {
     /* position: relative; */
     height: 20px;
@@ -710,9 +703,27 @@ table {
     min-height: 100px;
     margin-bottom: 5px;
 }
-.link{
+.link a{
     float: right;
-    font-size: 10px;
+    padding: .8em 1.5em;
+    text-decoration: none;
+    color: #555;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff #ccc #999 #eee;
+    background: #c1c1c1;
+    background: linear-gradient(#f5f5f5, #c1c1c1);
+}
+.link a:hover{
+    outline: 0;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
 }
 
 /* ------------TABLE--------------*/
@@ -800,4 +811,10 @@ table {
 }
 .CSSTableGenerator tr:first-child td:last-child{
     border-width:0px 0px 1px 1px;
+}
+/*---------------TABLE END------------------------------ */
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -70,6 +70,9 @@ tinymce.init({
     toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | link image",
     toolbar2: "print preview | forecolor backcolor emoticons",
     image_advtab: true,
+    images_upload_url: 'postAcceptor.php',
+    images_upload_base_path: '/some/basepath',
+    images_upload_credentials: true,
     templates: [
         {title: 'Test template 1', content: 'Test 1'},
         {title: 'Test template 2', content: 'Test 2'}

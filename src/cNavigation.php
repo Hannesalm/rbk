@@ -43,12 +43,12 @@ class CNavigation
                 <li><a href='medlem.php?p=klubben'>Anmälningsformulär</a></li>
             </ul>
             </li>
-            <li><a href=\"#\">Styrelse</a></li>
+            <li><a href='page.php?p=2'>Styrelse</a></li>
             <li><a href=\"#\">Information</a></li>
             <li><a href=\"#\">Hitta till oss</a></li>
         </ul>
     </li>
-        <li><a href=\"#\">Kurser</a></li>
+        <li><a href='page.php?p=1'>Kurser</a></li>
     <li>
         <a href=\"#\">Tävlingar</a>
         <ul>
